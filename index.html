@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wish</title>
+    <link rel="stylesheet" href="./birthday.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+        body {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+/* Side images */
+.side-img {
+    border-radius: 15px;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Center box */
+.center-box {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px gray;
+}
+
+/* Message */
+#message {
+    margin-top: 15px;
+    font-size: 18px;
+    color: blue;
+    opacity: 0;
+    transition: 1s;
+}
+
+.balloons {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    pointer-events: none;
+}
+
+.balloon {
+    width: 50px;
+    height: 70px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100px;
+    animation: floatUp 6s infinite;
+}
+
+.balloon:nth-child(2) {
+    left: 50%;
+    background-color: blue;
+    animation-delay: 2s;
+}
+
+.balloon:nth-child(3) {
+    left: 80%;
+    background-color: yellow;
+    animation-delay: 4s;
+}
+.balloon:nth-child(4)
+{
+    right : 80%;
+    background-color: pink;
+    animation-delay: 2s;
+}
+.balloon:nth-child(5)
+{
+    right : 60%;
+    background-color: brown;
+    animation-delay: 2s;
+}
+.balloon:nth-child(6)
+{
+    right : 40%;
+    background-color: pink;
+    animation-delay: 2s;
+}
+.balloon:nth-child(7)
+{
+    right : 30%;
+    background-color: pink;
+    animation-delay: 2s;
+}
+.balloon:nth-child(8)
+{
+    right : 83%;
+    background-color: pink;
+    animation-delay: 2s;
+}
+.balloon:nth-child(9)
+{
+    right : 20%;
+    background-color: pink;
+    animation-delay: 2s;
+}
+.balloon:nth-child(10)
+{
+    right : 10%;
+    background-color: pink;
+    animation-delay: 2s;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-800px);
+    }
+}
+
+
+.top-section {
+    margin-top: 50px;
+}
+
+/* Gallery */
+.gallery {
+    margin-top: 30px;
+    display: none;   /* 🔴 Hidden initially */
+    background-color: aqua;
+}
+
+/* Images */
+.gallery img {
+    width: 250px;
+    height: 180px;
+    margin: 10px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+  </style>
+</head>
+<body>
+    
+     <div class="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="ballon"></div>
+        <div class="ballon"></div>
+         <div class="ballon"></div>
+        <div class="ballon"></div>
+         <div class="ballon"></div>
+        <div class="ballon"></div>
+    </div>
+    <!-- <div class="row">
+            <div class="col-sm-4" style="margin-left: 200px;">
+<img src="./WhatsApp Image 2026-02-28 at 10.04.46.jpeg" height="600px" width="600px">
+           </div>
+
+           <div class="container1">
+            <div class="col-sm-4">
+        <h1>🥳🎊🎉<center> Happy Birthday </center> 🎉🎊🥳</h1>
+        <h2 id="name" style="font-weight: bold; font-family: 'Times New Roman', Times, serif; font-size: 30px; font-style: italic; color: blue;">Monisha</h2>
+        <p id="message"></p>
+            <button onclick="birthdayWish()">Click for Surprise😍</button>
+            </div>
+            </div>
+
+            <div class="col-sm-4">
+                <img src="./WhatsApp Image 2026-02-28 at 10.04.07.jpeg" height="600px" width="600px">
+            </div>
+        
+
+
+
+
+    </div>
+    </div> -->
+    
+<h1 style="text-align: center; color: crimson; border: 1px dotted pink; border-radius: 10px;margin-top: 40px;padding: 40px;text-shadow: 70px;">Happy BirthDay Monisha 😍🥳</h1>
+<div class="container mt-5">
+    <div class="row text-center align-items-center">
+
+        <!-- LEFT IMAGE -->
+        <div class="col-sm-4">
+            <img src="./WhatsApp Image 2026-05-03 at 17.26.50.jpeg"
+                 class="img-fluid side-img">
+        </div>
+
+        <!-- CENTER CONTENT -->
+        <div class="col-sm-4 center-box">
+            <h1>🥳🎊🎉<center> Happy Birthday </center> 🎉🎊🥳</h1>
+        <h2 id="name" style="font-weight: bold; font-family: 'Times New Roman', Times, serif; font-size: 30px; font-style: italic; color: blue;">Monisha</h2>
+
+            <button class="btn btn-danger mt-3" onclick="showWish()">
+                Click for Surprise 🎁
+            </button>
+
+            <p id="message"></p>
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="col-sm-4">
+            <img src="./WhatsApp Image 2026-02-28 at 10.04.46.jpeg"
+                 class="img-fluid side-img">
+        </div>
+
+    </div>
+<br>
+<br>
+<br>
+<br>
+
+    <div class="row text-center align-items-center">
+        <!-- <div class="col-sm-4">
+            <img src="./WhatsApp Image 2026-05-03 at 17.26.49 (3).jpeg" class="img-fluid side-img" height="400px" width="400px">
+        </div> -->
+
+        <div class="col-sm-12 center-box">
+            <div class="top-section" style="background-color:lightcyan ;">
+            <h2 style="font-weight: bold; font-family: 'Times New Roman', Times, serif; font-size: 30px; font-style: italic; color: blue;">My favorite Gallery</h2>
+            <button class="btn btn-warning mt-3" onclick="showGallery()">View Gallery</button>
+        </div>
+
+
+        <div id="gallery" class="gallery" style="background-color:lightcyan;">
+            <img src="./WhatsApp Image 2026-05-03 at 17.26.52.jpeg"><p>1. Ur eyes</p>
+            <img src="./WhatsApp Image 2026-05-03 at 17.26.50.jpeg"><p>2. Monisha</p>
+        <a href="" target="_blank"><img src="./WhatsApp Image 2026-05-03 at 17.26.49.jpeg"></a><br>
+            <img src="./image1.jpg.jpeg"><br>
+            <img src="./WhatsApp Image 2026-05-03 at 17.26.49 (3).jpeg">
+        </div>
+
+        </div>
+
+
+
+
+
+
+    </div>
+</div>
+
+<!-- <script src="birthday.js"></script> -->
+ <script>
+    function showWish() {
+
+    var message = document.getElementById("message");
+
+    message.innerHTML = "🎂Happiest Birthday Monisha May God bless you with lots of happiness and prosperity 💕. Your always the best 😍. I am extremely sorry for what I have done. Please forgive me.. I want you to be with me for life Long. U will be always special for me no matter what.. I cannot replace you. The way u cared me thought me helped me each n every time. I am always thankful for it. Once Again happiest Birthday 🎊💕🎂 Ammu 🎉";
+    message.style.opacity = "3";
+
+    // Optional: change background on click
+    document.body.style.background = "teal";
+    
+}
+
+function showGallery() {
+    var gallery = document.getElementById("gallery");
+gallery.style.backgroundColor = "lightcyan";
+    if (gallery.style.display === "block") {
+        gallery.style.display = "none";
+    } else {
+        gallery.style.display = "block";
+    }
+}
+ </script>
+</body>
+</html>
